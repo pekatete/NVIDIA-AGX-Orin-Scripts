@@ -1,17 +1,19 @@
 # NVIDIA-AGX-Orin-Scripts
-Bash scripts to set root filesystem of NVIDIA AGX Orin to SSD
+Bash scripts to migrate root filesystem of NVIDIA AGX Orin to SSD or revert to eMMC
 
 1. Migrating to SSD
 
-   a. Download file: migrate_to_ssd.sh
+   a. Determine the SSD device (e.g /dev/nvme0n1 or /dev/nvme0n1p1)
 
-   b. chmod +x migrate_to_ssd.sh
+   b. Download file: migrate_to_ssd.sh
 
-   c. sudo ./migrate_to_ssd.sh /dev/nvme0n1
+   c. chmod +x migrate_to_ssd.sh
 
-   d. sudo reboot
+   d. sudo ./migrate_to_ssd.sh /dev/nvme0n1
 
-2. Reverting to eMMC
+   e. sudo reboot
+
+3. Reverting to eMMC
 
     a. Download file: revert-from-ssd-to-emmc.sh
 
