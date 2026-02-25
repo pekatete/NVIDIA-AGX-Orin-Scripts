@@ -1,4 +1,13 @@
 # NVIDIA-AGX-Orin-Scripts
+If migrating to an SSD fomatted as XFS, ensure the kernel supports XFS before running the script. Run:
+```
+lsmod | grep xfs
+```
+or
+```
+grep CONFIG_XFS_FS /boot/config-$(uname -r)
+```
+
 Bash scripts to migrate root filesystem of NVIDIA AGX Orin to SSD or revert to eMMC
 
 1. Migrating to SSD - this moves the root filesystem to the SSD
