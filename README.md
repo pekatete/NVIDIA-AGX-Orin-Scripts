@@ -1,4 +1,10 @@
 # NVIDIA-AGX-Orin-Scripts
+
+Before you run the script, run this command to confirm your NVMe drive path:
+```
+lsblk -o NAME,FSTYPE,SIZE,MOUNTPOINT,MODEL
+```
+
 If migrating to an SSD fomatted as XFS, ensure the kernel supports XFS before running the script. Run:
 ```
 lsmod | grep xfs
